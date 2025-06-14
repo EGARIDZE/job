@@ -13,5 +13,7 @@ Thumbs.db
 /robots.txt
 
 /bitrix/
+/vendor/
+/local/php_interface/vendor/
 *.txt
 /test.php
