@@ -1,0 +1,26 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "Главная",
+        "/",
+        Array(),
+        Array(
+        ),
+        ""
+    ),
+	Array(
+		"Вакансии",
+		"/vakansii/",
+		Array(),
+		Array(),
+		""
+	),
+    Array(
+        "Страницы",
+        "/pages/",
+        Array(),
+        Array(),
+        ""
+    )
+);
+?>
