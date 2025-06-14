@@ -2,8 +2,12 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Data\Cache;
+use Bitrix\Main\Loader;
 class SectionList extends CBitrixComponent {
     public function executeComponent() {
+        if (!Loader::includeModule('iblock')) {
+            return;
+        }
         $this->getSections();
         $this->IncludeComponentTemplate();
     }
@@ -17,7 +21,6 @@ class SectionList extends CBitrixComponent {
         if($cache->initCache($cacheTime, $cacheId, $cachePath)) {
             $this->arResult['ITEMS'] = $cache->getVars()['ITEMS'];
         } elseif ($cache->startDataCache()) {
-            echo 'Кеш пишется';
             $sections = [];
 
             $resultObject = CIBlockSection::GetList(
