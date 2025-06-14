@@ -13,5 +13,5 @@ Thumbs.db
 /robots.txt
 
 /bitrix/
-
+*.txt
 /test.php
