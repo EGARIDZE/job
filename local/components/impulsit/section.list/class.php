@@ -2,7 +2,11 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Data\Cache;
+use Bitrix\Main\ORM\Query\Query;
 use Bitrix\Main\Loader;
+use Bitrix\Main\ORM\Fields\ExpressionField;
+use Bitrix\Iblock\SectionElementTable;
+use Bitrix\Iblock\SectionTable;
 class SectionList extends CBitrixComponent {
     public function executeComponent() {
         if (!Loader::includeModule('iblock')) {
@@ -23,17 +27,28 @@ class SectionList extends CBitrixComponent {
         } elseif ($cache->startDataCache()) {
             $sections = [];
 
-            $resultObject = CIBlockSection::GetList(
-                ['SORT' => 'ASC'],
-                ['IBLOCK_ID' => $this->arParams['IBLOCK_ID'], 'ACTIVE' => 'Y', 'CHECK_PERMISSIONS' => 'N'],
-                true,
-                ['ID', 'NAME'],
-                ['nTopCount' => 8]
-            );
+            $query = (new Query(SectionTable::getEntity()));
+            $query->setSelect(['ID', 'NAME'])
+                ->setFilter(['=IBLOCK_ID' => $this->arParams['IBLOCK_ID'], '=ACTIVE' => 'Y'])
+                ->setOrder(['SORT' => 'ASC'])
+                ->setLimit(8);
+            $result = $query->exec();
+            $sections = $result->fetchAll();
 
-            while ($section = $resultObject->GetNext()) {
-                $sections[] = $section;
+            foreach ($sections as &$section) {
+                $countRow = SectionElementTable::getList([
+                    'select' => [
+                        new ExpressionField('CNT', 'COUNT(*)')
+                    ],
+                    'filter' => [
+                        'IBLOCK_SECTION_ID'        => $section['ID'],
+                        'IBLOCK_ELEMENT.ACTIVE'    => 'Y',
+                        'IBLOCK_ELEMENT.IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
+                    ],
+                ])->fetch();
+                $section['ELEMENT_CNT'] = $countRow['CNT'];
             }
+            unset($section);
 
             $this->arResult['ITEMS'] = $sections;
             $cache->endDataCache(['ITEMS' => $sections]);
