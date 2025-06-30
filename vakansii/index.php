@@ -27,10 +27,7 @@ $APPLICATION->SetTitle("Вакансии");
 		"DETAIL_PAGER_SHOW_ALL" => "Y",	// Показывать ссылку "Все"
 		"DETAIL_PAGER_TEMPLATE" => "",	// Название шаблона
 		"DETAIL_PAGER_TITLE" => "Страница",	// Название категорий
-		"DETAIL_PROPERTY_CODE" => array(	// Свойства
-			0 => "",
-			1 => "",
-		),
+		"DETAIL_PROPERTY_CODE" => array("*"),
 		"DETAIL_SET_CANONICAL_URL" => "N",	// Устанавливать канонический URL
 		"DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
 		"DISPLAY_DATE" => "Y",	// Выводить дату элемента
@@ -48,13 +45,13 @@ $APPLICATION->SetTitle("Вакансии");
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(	// Свойства
-			0 => "",
+			0 => "PROPERTY_LOCATION",
 			1 => "",
 		),
 		"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
 		"META_DESCRIPTION" => "-",	// Установить описание страницы из свойства
 		"META_KEYWORDS" => "-",	// Установить ключевые слова страницы из свойства
-		"NEWS_COUNT" => "20",	// Количество новостей на странице
+		"NEWS_COUNT" => "2",	// Количество новостей на странице
 		"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
 		"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
