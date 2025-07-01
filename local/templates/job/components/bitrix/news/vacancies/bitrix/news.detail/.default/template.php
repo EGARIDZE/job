@@ -32,7 +32,7 @@ $this->setFrameMode(true);
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="job_details_header">
+                    <div id="<?= $arResult['ID'];?>" class="job_details_header">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
                                 <div class="thumb">
@@ -84,50 +84,10 @@ $this->setFrameMode(true);
                             <p><?= $arResult['PROPERTIES']['PROPERTY_ADVANTAGES']['~VALUE']['TEXT']; ?></p>
                         </div>
                     </div>
-                    <div class="apply_job_form white-bg">
-                        <h4>Apply for the job</h4>
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input_field">
-                                        <input type="text" placeholder="Your name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="input_field">
-                                        <input type="text" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input_field">
-                                        <input type="text" placeholder="Website/Portfolio link">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button type="button" id="inputGroupFileAddon03"><i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
-                                            <label class="custom-file-label" for="inputGroupFile03">Upload CV</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="input_field">
-                                        <textarea name="#" id="" cols="30" rows="10" placeholder="Coverletter"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="submit_btn">
-                                        <button class="boxed-btn3 w-100" type="submit">Apply Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+
+
+                <?= $arResult['FORM_APPLY']; ?>
+
                 </div>
                 <div class="col-lg-4">
                     <div class="job_sumary">
