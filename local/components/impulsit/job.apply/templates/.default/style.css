@@ -4,3 +4,36 @@
     margin-top: 0.25em;
     min-height: 1.2em;
 }
+
+#jobApplyModal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+}
+
+#jobApplyModal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#jobApplyModal .modal-content {
+    background: #fff;
+    border-radius: 6px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+#jobApplyModal.active .modal-content {
+    transform: translateY(0);
+}

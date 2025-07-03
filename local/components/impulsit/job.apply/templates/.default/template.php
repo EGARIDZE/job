@@ -59,3 +59,20 @@
         </div>
     </form>
 </div>
+
+<div id="jobApplyModal">
+    <div class="modal-content">
+        <div class="apply_job_success">
+            <h4>Спасибо!</h4>
+            <p>Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.</p>
+            <button
+                    type="button"
+                    class="boxed-btn3"
+                    id="closeSuccessBtn"
+                    style="margin-top:20px;"
+            >
+                Закрыть
+            </button>
+        </div>
+    </div>
+</div>

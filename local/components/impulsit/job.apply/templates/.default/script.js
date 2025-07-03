@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(){
     const form = document.getElementById('formApply');
+    const modal = document.getElementById('jobApplyModal');
+    const closeModalBtn = document.getElementById('closeSuccessBtn');
+
+    function showModal() {
+        modal.classList.add('active');
+    }
+
+    function closeModal () {
+        modal.classList.remove('active');
+    }
+    // закрытие модалки успешной отправки
+    closeModalBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', function(e){
         e.preventDefault();
@@ -34,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function(){
                         contentType: false
                     })
                         .then(response => {
-                            console.log(response)
+                            showModal();
+                            form.reset();
                         })
                         .catch(err => {
                             console.error(err);
