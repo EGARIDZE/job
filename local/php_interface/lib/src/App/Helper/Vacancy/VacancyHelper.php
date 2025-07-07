@@ -5,9 +5,19 @@ namespace App\Helper\Vacancy;
 use Bitrix\Iblock\Elements\ElementJobTable;
 
 class VacancyHelper {
-    public static function getVacancyCount(array $entities, string $propertyCode = null) {
+    public static function getVacancyCount(array $entities = null, string $propertyCode = null) {
         \Bitrix\Main\Loader::includeModule('iblock');
-        if(empty($entities)) return;
+
+        if(empty($entities) && empty($propertyCode)) {
+            $result = ElementJobTable::getList([
+                'select' => ['CNT'],
+                'filter' => ['=ACTIVE'=> 'Y'],
+                'runtime' => [
+                    new \Bitrix\Main\Entity\ExpressionField('CNT', 'COUNT(*)'),
+                ]
+            ])->fetch();
+            return $result['CNT'];
+        }
 
         $entitiesID = array_column($entities, 'ID');
         $jobObject = ElementJobTable::getList([
