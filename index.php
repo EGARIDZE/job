@@ -96,200 +96,68 @@ $APPLICATION->SetTitle('Главная');
     <!-- popular_catagory_area_end  -->
 
     <!-- job_listing_area_start  -->
-    <div class="job_listing_area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="section_title">
-                        <h3>Job Listing</h3>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="brouse_job text-right">
-                        <a href="jobs.html" class="boxed-btn4">Browse More Job</a>
-                    </div>
-                </div>
-            </div>
-            <div class="job_lists">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single_jobs white-bg d-flex justify-content-between">
-                            <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="img/svg_icon/1.svg" alt="">
-                                </div>
-                                <div class="jobs_conetent">
-                                    <a href="job_details.html"><h4>Software Engineer</h4></a>
-                                    <div class="links_locat d-flex align-items-center">
-                                        <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                        </div>
-                                        <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jobs_right">
-                                <div class="apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
-                                    <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                </div>
-                                <div class="date">
-                                    <p>Date line: 31 Jan 2020</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single_jobs white-bg d-flex justify-content-between">
-                            <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="img/svg_icon/2.svg" alt="">
-                                </div>
-                                <div class="jobs_conetent">
-                                    <a href="job_details.html"><h4>Digital Marketer</h4></a>
-                                    <div class="links_locat d-flex align-items-center">
-                                        <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                        </div>
-                                        <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jobs_right">
-                                <div class="apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
-                                    <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                </div>
-                                <div class="date">
-                                    <p>Date line: 31 Jan 2020</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single_jobs white-bg d-flex justify-content-between">
-                            <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="img/svg_icon/3.svg" alt="">
-                                </div>
-                                <div class="jobs_conetent">
-                                    <a href="job_details.html"><h4>Wordpress Developer</h4></a>
-                                    <div class="links_locat d-flex align-items-center">
-                                        <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                        </div>
-                                        <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jobs_right">
-                                <div class="apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
-                                    <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                </div>
-                                <div class="date">
-                                    <p>Date line: 31 Jan 2020</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single_jobs white-bg d-flex justify-content-between">
-                            <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="img/svg_icon/4.svg" alt="">
-                                </div>
-                                <div class="jobs_conetent">
-                                    <a href="job_details.html"><h4>Visual Designer</h4></a>
-                                    <div class="links_locat d-flex align-items-center">
-                                        <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                        </div>
-                                        <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jobs_right">
-                                <div class="apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
-                                    <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                </div>
-                                <div class="date">
-                                    <p>Date line: 31 Jan 2020</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single_jobs white-bg d-flex justify-content-between">
-                            <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="img/svg_icon/5.svg" alt="">
-                                </div>
-                                <div class="jobs_conetent">
-                                    <a href="job_details.html"><h4>Software Engineer</h4></a>
-                                    <div class="links_locat d-flex align-items-center">
-                                        <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                        </div>
-                                        <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jobs_right">
-                                <div class="apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
-                                    <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                </div>
-                                <div class="date">
-                                    <p>Date line: 31 Jan 2020</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single_jobs white-bg d-flex justify-content-between">
-                            <div class="jobs_left d-flex align-items-center">
-                                <div class="thumb">
-                                    <img src="img/svg_icon/1.svg" alt="">
-                                </div>
-                                <div class="jobs_conetent">
-                                    <a href="job_details.html"><h4>Creative Designer</h4></a>
-                                    <div class="links_locat d-flex align-items-center">
-                                        <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> California, USA</p>
-                                        </div>
-                                        <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jobs_right">
-                                <div class="apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
-                                    <a href="job_details.html" class="boxed-btn3">Apply Now</a>
-                                </div>
-                                <div class="date">
-                                    <p>Date line: 31 Jan 2020</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?$APPLICATION->IncludeComponent("bitrix:news.list", "job.listing", Array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+        "ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+        "AJAX_MODE" => "N",	// Включить режим AJAX
+        "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+        "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+        "AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+        "AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+        "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+        "CACHE_GROUPS" => "N",	// Учитывать права доступа
+        "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+        "CACHE_TYPE" => "A",	// Тип кеширования
+        "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+        "DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+        "DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
+        "DISPLAY_DATE" => "Y",	// Выводить дату элемента
+        "DISPLAY_NAME" => "Y",	// Выводить название элемента
+        "DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
+        "DISPLAY_PREVIEW_TEXT" => "N",	// Выводить текст анонса
+        "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+        "FIELD_CODE" => array(	// Поля
+            0 => "",
+            1 => "",
+        ),
+        "FILTER_NAME" => "",	// Фильтр
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+        "IBLOCK_ID" => "3",	// Код информационного блока
+        "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
+        "INCLUDE_SUBSECTIONS" => "N",	// Показывать элементы подразделов раздела
+        "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+        "NEWS_COUNT" => "5",	// Количество новостей на странице
+        "PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+        "PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+        "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+        "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+        "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+        "PAGER_TITLE" => "Новости",	// Название категорий
+        "PARENT_SECTION" => "",	// ID раздела
+        "PARENT_SECTION_CODE" => "",	// Код раздела
+        "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+        "PROPERTY_CODE" => array(	// Свойства
+            0 => "PROPERTY_LOCATION",
+            1 => "PROPERTY_EMPLOYMENT_RATE",
+        ),
+        "SET_BROWSER_TITLE" => "N",	// Устанавливать заголовок окна браузера
+        "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+        "SET_META_DESCRIPTION" => "N",	// Устанавливать описание страницы
+        "SET_META_KEYWORDS" => "N",	// Устанавливать ключевые слова страницы
+        "SET_STATUS_404" => "N",	// Устанавливать статус 404
+        "SET_TITLE" => "N",	// Устанавливать заголовок страницы
+        "SHOW_404" => "N",	// Показ специальной страницы
+        "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+        "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+        "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+        "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+        "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+    ),
+        false
+    );?>
+
     <!-- job_listing_area_end  -->
 
     <!-- featured_candidates_area_start  -->
@@ -506,3 +374,5 @@ $APPLICATION->SetTitle('Главная');
         </div>
     </div>
     <!-- /testimonial_area  -->
+
+<? require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>

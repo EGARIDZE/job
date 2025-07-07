@@ -5,12 +5,12 @@
         <div class="row align-items-center mb-40">
             <div class="col-lg-6 col-md-6">
                 <div class="section_title">
-                    <h3>Top Companies</h3>
+                    <h3>Лучшие компании</h3>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="brouse_job text-right">
-                    <a href="jobs.html" class="boxed-btn4">Browse More Job</a>
+                    <a href="/vakansii" class="boxed-btn4">Просмотреть больше вакансий</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                             <img src="<?= $arItem['PREVIEW_PICTURE_SRC'] ?>" alt="<?= $arItem['ALT'] ?>" title="<?= $arItem['TITLE'] ?>">
                         </div>
                         <a href="jobs.html"><h3><?= $arItem['NAME'] ?></h3></a>
-                        <p> <span><?= $arItem['VACANCY_COUNT'] ?></span> Available position</p>
+                        <p> <span><?= $arItem['VACANCY_COUNT'] ?></span> доступных позиций</p>
                     </div>
                 </div>
             <?php endforeach; ?>
