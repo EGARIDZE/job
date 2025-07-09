@@ -11,6 +11,35 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+use App\Helper\IblockHelper;
+use App\Helper\Vacancy\VacancyHelper;
+?>
+
+<!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_1">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="bradcam_text">
+					<h3><?= VacancyHelper::getVacancyCount() ?>+ Доступных вакансии</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/ bradcam_area  -->
+
+<?php
+$APPLICATION->IncludeComponent(
+	"impulsit:filter",
+	"",
+	[
+            "IBLOCK_ID" => IBLockHelper::getIblockIdByCode('job'),
+            "COMPANY_IBLOCK_ID" => IblockHelper::getIblockIdByCode('companies')
+
+    ]
+);
 ?>
 
 <?$APPLICATION->IncludeComponent(
@@ -59,7 +88,7 @@ $this->setFrameMode(true);
 		"ACTIVE_DATE_FORMAT" => $arParams["LIST_ACTIVE_DATE_FORMAT"],
 		"USE_PERMISSIONS" => $arParams["USE_PERMISSIONS"],
 		"GROUP_PERMISSIONS" => $arParams["GROUP_PERMISSIONS"],
-		"FILTER_NAME" => $arParams["FILTER_NAME"],
+		"FILTER_NAME" => "jobsFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
 		"USE_RATING" => $arParams["USE_RATING"],
 		"MAX_VOTE" => $arParams["MAX_VOTE"],

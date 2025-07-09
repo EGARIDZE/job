@@ -16,27 +16,29 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-$preparingPrevUrlPage = 'PAGEN_' . $arResult['NavNum'] . '=' . ($arResult['NavPageNomer'] - 1);
-$preparingNextUrlPage = 'PAGEN_' . $arResult['NavNum'] . '=' . ($arResult['NavPageNomer'] + 1);
-$prevUrlPage = $arResult['sUrlPath'] . '?' . $preparingPrevUrlPage;
-$nextUrlPage = $arResult['sUrlPath'] . '?' . $preparingNextUrlPage;
+$prevPage = $arResult['NavPageNomer'] - 1;
+$nextPage = $arResult['NavPageNomer'] + 1;
+$pageParam = 'PAGEN_'.$arResult['NavNum'];
+
+$prevUrl = $APPLICATION->GetCurPageParam(
+    $pageParam.'='.$prevPage,
+    [$pageParam]
+);
+$nextUrl = $APPLICATION->GetCurPageParam(
+    $pageParam.'='.$nextPage,
+    [$pageParam]
+);
 ?>
+<div class="pagination_wrap">
+    <ul>
+        <?php if($arResult['NavPageNomer'] > 1): ?>
+            <li><a href="<?= $prevUrl ?>"><i class="ti-angle-left"></i></a></li>
+            <li><a href="<?= $prevUrl ?>"><span><?= str_pad($prevPage, 2, '0', STR_PAD_LEFT) ?></span></a></li>
+        <?php endif ?>
 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="pagination_wrap">
-            <ul>
-                <?php if($arResult['NavPageNomer'] !== 1): ?>
-                <li><a href="<?= $prevUrlPage; ?>"> <i class="ti-angle-left"></i> </a></li>
-                <li><a href="<?= $prevUrlPage; ?>"><span>0<?= ($arResult['NavPageNomer'] - 1); ?></span></a></li>
-                <?php endif; ?>
-
-                <?php if($arResult['NavPageNomer'] < $arResult['NavPageCount']):?>
-                    <li><a href="<?= $nextUrlPage; ?>"><span>0<?= ($arResult['NavPageNomer'] + 1); ?></span></a></li>
-                    <li><a href="<?= $nextUrlPage; ?>"> <i class="ti-angle-right"></i> </a></li>
-                <?php endif; ?>
-
-            </ul>
-        </div>
-    </div>
+        <?php if($arResult['NavPageNomer'] < $arResult['NavPageCount']): ?>
+            <li><a href="<?= $nextUrl ?>"><span><?= str_pad($nextPage, 2, '0', STR_PAD_LEFT) ?></span></a></li>
+            <li><a href="<?= $nextUrl ?>"><i class="ti-angle-right"></i></a></li>
+        <?php endif ?>
+    </ul>
 </div>
