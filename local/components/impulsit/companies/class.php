@@ -26,7 +26,7 @@ class CompanyList extends CBitrixComponent {
             )
         ])->fetchAll();
 
-        $getVacancyCount = VacancyHelper::getVacancyCount($companies, 'PROPERTY_COMPANY_NAME');
+        $getVacancyCount = VacancyHelper::getVacancyCount($companies, 'COMPANY_NAME');
 
         foreach($companies as &$company) {
             $company['VACANCY_COUNT'] = $getVacancyCount[$company['ID']] ?? 0;

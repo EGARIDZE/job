@@ -65,21 +65,21 @@
 
                         </form>
                     </div>
-<!--                    <div style="margin-bottom: 30px;" class="range_wrap mt-3">-->
-<!--                        <label>Ценовой диапазон:</label>-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-lg-6">-->
-<!--                                <div class="single_field">-->
-<!--                                    <input type="text" name="price_from" class="form-control" placeholder="От">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-6">-->
-<!--                                <div class="single_field">-->
-<!--                                    <input type="text" name="price_to" class="form-control" placeholder="До">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div style="margin-bottom: 30px;" class="range_wrap mt-3">
+                        <label>Ценовой диапазон:</label>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="single_field">
+                                    <input type="text" name="price_from" class="form-control" placeholder="От">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="single_field">
+                                    <input type="text" name="price_to" class="form-control" placeholder="До">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="reset_btn">
                         <button class="boxed-btn3 red w-100" type="submit">Сбросить</button>
                     </div>

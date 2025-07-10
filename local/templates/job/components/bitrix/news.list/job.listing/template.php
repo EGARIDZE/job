@@ -45,10 +45,10 @@ $this->setFrameMode(true);
                                     <a href="<?= $arItem['DETAIL_PAGE_URL']; ?>"><h4><?= $arItem['NAME']; ?></h4></a>
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> <?= $arItem['PROPERTIES']['PROPERTY_LOCATION']['VALUE']; ?></p>
+                                            <p> <i class="fa fa-map-marker"></i> <?= $arItem['PROPERTIES']['LOCATION']['VALUE']; ?></p>
                                         </div>
                                         <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> <?= $arItem['PROPERTIES']['PROPERTY_EMPLOYMENT_RATE']['VALUE']; ?></p>
+                                            <p> <i class="fa fa-clock-o"></i> <?= $arItem['PROPERTIES']['EMPLOYMENT_RATE']['VALUE']; ?></p>
                                         </div>
                                     </div>
                                 </div>

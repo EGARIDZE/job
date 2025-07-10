@@ -1,6 +1,7 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
+use App\Helper\Vacancy\VacancyHelper;
 ?>
 
 
@@ -11,11 +12,13 @@ $APPLICATION->SetTitle('Главная');
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-md-6">
                         <div class="slider_text">
-                            <h5 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">4536+ Jobs listed</h5>
-                            <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Find your Dream Job</h3>
-                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">We provide online instant cash loans with quick approval that suit your term length</p>
+                            <h5 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s"><?= VacancyHelper::getVacancyCount() ?>+ вакансий</h5>
+                            <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Найдите работу своей мечты</h3>
+                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+                                Мы предоставляем онлайн мгновенные денежные займы с быстрым одобрением, учитывающие срок займа
+                            </p>
                             <div class="sldier_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
-                                <a href="#" class="boxed-btn3">Upload your Resume</a>
+                                <a href="#" class="boxed-btn3">Загрузите ваше резюме</a>
                             </div>
                         </div>
                     </div>
@@ -139,8 +142,8 @@ $APPLICATION->SetTitle('Главная');
         "PARENT_SECTION_CODE" => "",	// Код раздела
         "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
         "PROPERTY_CODE" => array(	// Свойства
-            0 => "PROPERTY_LOCATION",
-            1 => "PROPERTY_EMPLOYMENT_RATE",
+            0 => "LOCATION",
+            1 => "EMPLOYMENT_RATE",
         ),
         "SET_BROWSER_TITLE" => "N",	// Устанавливать заголовок окна браузера
         "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
