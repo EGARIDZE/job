@@ -9,11 +9,11 @@
                         <h3>Фильтр</h3>
                         <form id="filterForm" action="#" method="GET">
                             <div class="row">
-<!--                                <div class="col-lg-12">-->
-<!--                                    <div class="single_field">-->
-<!--                                        <input type="text" name="name" placeholder="Поиск" onchange="this.form.submit()">-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <div class="col-lg-12">
+                                    <div class="single_field">
+                                        <input type="text" name="name" placeholder="Поиск" value="<?= htmlspecialchars($_GET['name'] ?? '') ?>" onchange="this.form.submit()">
+                                    </div>
+                                </div>
                                 <div class="col-lg-12">
                                     <div class="single_field">
                                         <select name="location" class="wide" onchange="this.form.submit()">
@@ -92,14 +92,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-<!--                                <div class="col-lg-12">-->
-<!--                                    <div class="single_field">-->
-<!--                                        <div class="reset_btn">-->
-<!--                                            <input id="filterBtn" style="padding: 13px 29px 13px 29px;" class="boxed-btn3 green w-100" type="submit" value="Отправить">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
 
                             </div>
 

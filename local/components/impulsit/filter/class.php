@@ -12,6 +12,10 @@ class Filter extends CBitrixComponent{
     {
         global $jobsFilter;
 
+        if (!empty($_GET['name'])) {
+            $jobsFilter['%NAME'] = $_GET['name'];
+        }
+
         if(!empty($_GET['location'])){
             $jobsFilter['PROPERTY_LOCATION'] = $_GET['location'];
         }

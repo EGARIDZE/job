@@ -15,15 +15,6 @@ $this->setFrameMode(true);
 
 <!-- job_listing_area_start  -->
             <div class="col-lg-9">
-                <div class="recent_joblist_wrap">
-                    <div class="recent_joblist white-bg ">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <h4>Список вакансий</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="job_lists m-0">
                     <div class="row">
